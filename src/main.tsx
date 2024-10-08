@@ -6,7 +6,8 @@ import {Provider} from "react-redux";
 import {store} from "./store/store.ts";
 import WebApp from "@twa-dev/sdk";
 
-if (window.Telegram.WebApp.initData !== '' && window.Telegram.WebApp.initData !== undefined) {
+if (WebApp.initData !== '' && WebApp.initData !== undefined) {
+    console.log(WebApp.initData)
     ReactDOM.createRoot(document.getElementById('root')!).render(
         <Provider store={store}>
             <App/>
